@@ -1,4 +1,4 @@
-\documentclass[SE,authoryear,toc]{lsstdoc}
+\documentclass[SE,lsstdraft, authoryear,toc]{lsstdoc}
 % lsstdoc documentation: https://lsst-texmf.lsst.io/lsstdoc.html
 \input{meta}
 
@@ -10,10 +10,10 @@
 %\input{aglossary.tex}
 %\makeglossaries
 
-\title{Project Documentation Future State Report}
+\title{Project-wide Documentation Proposal for Rubin Observatory Operations}
 
 % Optional subtitle
-% \setDocSubtitle{A subtitle}
+\setDocSubtitle{(Report from the Rubin Observatory Documentation Working Group)}
 
 \author{%
 Chuck Claver (chair),
@@ -25,8 +25,8 @@ Patrick Ingraham,
 Tony Johnson,
 Kristen Metzger,
 Austin Roberts,
-Matthew Rumore, and 
-Jonathan Sick.
+Jonathan Sick,
+Matthew Rumore.
 }
 
 \setDocRef{SITCOMTN-014}
@@ -38,7 +38,7 @@ Jonathan Sick.
 % \setDocCurator{The Curator of this Document}
 
 \setDocAbstract{%
-This document is a report on the recommended future state and organization of Rubin Construction Documentation.  This will constitute the planned technical documentation package delivered from the Construction Project to Operation as part of the criteria for construction completeness.
+This technical note is a report to recommend a future state for Rubin Observatory Operations documentation by the Project-wide Documentation Working Group after an initial documentation survey (\url{https://sitcomtn-012.lsst.io/}) and further analysis and discussion. As a final deliverable for the charge described in \url{LSE-489.lsst.io}, this proposal includes requirements, strategy, methodology and organization for the technical documentation package needed to establish construction completeness and operational readiness from the Construction Project and a method of sustained maintenance throughout Operations. The presented implementation plan for transitioning includes an estimated level of effort, resources, scheduling and risks if not implemented.
 }
 
 % Change history defined here.
@@ -46,7 +46,10 @@ This document is a report on the recommended future state and organization of Ru
 % Fields: VERSION, DATE, DESCRIPTION, OWNER NAME.
 % See LPM-51 for version number policy.
 \setDocChangeRecord{%
-  \addtohist{1}{YYYY-MM-DD}{Unreleased.}{Chuck Claver}
+  \addtohist{0.0}{2021-06-26}{First draft of preliminary content.}{Chuck Claver}
+  \addtohist{0.1}{2021-08-30}{Input to Documentation Portal.}{Jonathan Sick}
+  \addtohist{0.2}{2021-09-14}{Preliminary content, Portal architecture and effort.}{Chuck Claver, Jonathan Sick}
+  \addtohist{0.3}{XXXX-XX-XX}{Incorporate draft from Confluence pages and shared files.}{David Cabrera, Matthew Rumore}
 }
 
 
@@ -80,7 +83,7 @@ This document is a report on the recommended future state and organization of Ru
 \input{RiskAssessment}
 	
 
-
+\newpage
 \appendix
 % Include all the relevant bib files.
 % https://lsst-texmf.lsst.io/lsstdoc.html#bibliographies
