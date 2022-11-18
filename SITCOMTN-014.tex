@@ -1,4 +1,5 @@
 \documentclass[SE,lsstdraft, authoryear,toc]{lsstdoc}
+
 % lsstdoc documentation: https://lsst-texmf.lsst.io/lsstdoc.html
 \input{meta}
 
@@ -35,10 +36,12 @@ Matthew Rumore.
 \date{\vcsDate}
 
 % Optional: name of the document's curator
-% \setDocCurator{The Curator of this Document}
+\setDocCurator{Matthew Rumore}
 
 \setDocAbstract{%
-This technical note is a report to recommend a future state for Rubin Observatory Operations documentation by the Project-wide Documentation Working Group after an initial documentation survey (\url{https://sitcomtn-012.lsst.io/}) and further analysis and discussion. As a final deliverable for the charge described in \url{LSE-489.lsst.io}, this proposal includes requirements, strategy, methodology and organization for the technical documentation package needed to establish construction completeness and operational readiness from the Construction Project and a method of sustained maintenance throughout Operations. The presented implementation plan for transitioning includes an estimated level of effort, resources, scheduling and risks if not implemented.
+This technical note is a report to recommend a future state for Rubin Observatory Operations documentation by the Project-wide Documentation Working Group, as a final deliverable for the charge described in \url{LSE-489.lsst.io}.
+This proposal presents a high-level documentation strategy for Rubin Observatory Operations with suggested methodologies to transition Construction Project documents and organizations for the technical documentation package needed to establish construction completeness and operational readiness.
+The presented implementation plan for transitioning includes an estimated level of effort, resources, scheduling and risks if not implemented, as well as a method of sustained maintenance throughout Operations.
 }
 
 % Change history defined here.
@@ -49,7 +52,7 @@ This technical note is a report to recommend a future state for Rubin Observator
   \addtohist{0.0}{2021-06-26}{First draft of preliminary content.}{Chuck Claver}
   \addtohist{0.1}{2021-08-30}{Input to Documentation Portal.}{Jonathan Sick}
   \addtohist{0.2}{2021-09-14}{Preliminary content, Portal architecture and effort.}{Chuck Claver, Jonathan Sick}
-  \addtohist{0.3}{XXXX-XX-XX}{Incorporate draft from Confluence pages and shared files.}{David Cabrera, Matthew Rumore}
+  \addtohist{0.3}{2022-11-18}{Incorporate draft from Confluence pages and shared files as pre-draft.}{David Cabrera, Matthew Rumore}
 }
 
 
@@ -67,8 +70,8 @@ This technical note is a report to recommend a future state for Rubin Observator
 
 \input{DocumentViews}
 	\input{ProductView}
-	\input{AccessView}
 	\input{StorageView}
+	\input{AccessView}
 	\input{TopicView}
 
 \input{ImplementationPlan}
@@ -78,14 +81,18 @@ This technical note is a report to recommend a future state for Rubin Observator
 	\input{PDMWorksPath}
 	\input{ResourcesResponsibilities}
 	\input{Schedule}
-	
+
 \input{TransitionWorkflow}
-	
+
 \input{RiskAssessment}
-	
+
 
 \newpage
 \appendix
+
+\input{AppendixExamples}
+
+\newpage
 % Include all the relevant bib files.
 % https://lsst-texmf.lsst.io/lsstdoc.html#bibliographies
 \section{References} \label{sec:bib}
