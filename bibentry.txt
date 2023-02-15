@@ -3,7 +3,7 @@
 @DocuShare{SITCOMTN-014,
    author = { Chuck Claver },
     title = {Project Documentation Future State Report},
-     year = 2021,
-    month = Jun,
+     year = 2022,
+    month = Nov,
    handle = {SITCOMTN-014},
       url = {https://sitcomtn-014.lsst.io } }
