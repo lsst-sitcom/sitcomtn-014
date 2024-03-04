@@ -1,6 +1,6 @@
 \section{Introduction}
 
-This document serves as the proposal developed by the Vera C.\ Rubin Observatory Project-wide Documentation Working Group to fulfill its charge defined in \citeds{LSE-489}.
+This document serves as a roadmap developed by the Vera C.\ Rubin Observatory Project-wide Documentation Working Group to fulfill its charge defined in \citeds{LSE-489}.
 Included are recommendations and suggestions for a systematic structure and methodology within the Rubin Observatory operations to create, update and release different types of technical documentation; collect them from the technical groups across the different system within Rubin Observatory; classify the information by system, purpose and users' needs; and, create or modify tools to manage and retrieve information with reliability within a flexible and extendable system.
 The Documentation Working Group considered the wide berth of topics and technical areas, their differing requirements and processes, the variety of produced information, and large, diverse population involved with Rubin Observatory.
 The strategies in this proposal aim to support Rubin Observatory staff to reliably and confidently demonstrate operations readiness \citedsp{SITCOMTN-005} and execute operational expectations throughout operations --- lasting impact on science, strong work safety and environmentally sustainable culture with continuous improvement, and integrated and diverse community interaction.
@@ -8,31 +8,31 @@ The strategies in this proposal aim to support Rubin Observatory staff to reliab
 To guide the proposal, the Documentation Working Group reported in \citeds{SITCOMTN-012} on its effort to inventory existing documentation and repositories predominant focused on the construction projects: the National Science Foundation (NSF) major research equipment and facilities construction (MREFC) effort managed by the LSST Corporation (LSSTC), and the Department of Energy (DOE) major items of equipment (MIE) effort for the Legacy Survey of Space and Time (LSST) Camera (LSSTCam) managed by SLAC National Accelerator Laboratory.
 Information is located on different official and non-official repositories, some considered temporary since they will not be continually supported throughout operations.
 This proposal includes steps to transition documentation from the construction, commissioning and pre-operations efforts into operations within an integrated, project-wide approach.
-An evaluation of the level of effort and resources needed to realise this proposal is presented in a separate dcument \citeds{rtn-076}. 
-Risks and mitigations will be managed by the Rubin Risk Board and managed using the Rubin Risk Tool, \citeds{rdo-71}.
 
-As a measure to systematically and methodologically handle the information, four \emph{Documentation Views} have been developed to create an efficient internal structure that bases its approach on the users, staff and communities interested on accessing the information.
-Their primary intent is to record, classify and categorize documentation, catalog their respective repositories, define ownership and target audiences, and organize relationships and dependencies between documents.
-The Documentation Views are detailed in Section~\ref{sec:views}.
-Crucially, this structure should sustainably allow groups to identify primary sources, i.e., the normative source of information, thereby supporting an orderly way to reference information project-wide.
+An evaluation of the level of effort and resources needed to realize this proposal is presented in a separate document, \citeds{RTN-076}. 
+Risks and mitigations will be managed by the Rubin Operations Risk Board and managed using the Rubin Risk Tool, \citeds{RDO-71}.
+
+Section~\ref{sec:views} of this report includes four \emph{Documentation Views} developed to create an efficient internal structure that bases its approach on the users, staff and communities interested on accessing the information.
+Their primary intent is to provide a systematic methodology to record, classify and categorize documentation, catalog their respective repositories, define ownership and target audiences, and organize relationships and dependencies between documents.
+Crucially, this structure allows individual groups to identify definitive sources of information, i.e., the normative source of information, thereby supporting an orderly way to reference information project-wide throughout operations without depending on an individual's system-specific knowledge.
 The Documentation Working Group intends the implementation of the Documentation Views will constitute a deliverable from the construction projects to the operations teams as a method to show construction completeness and operations readiness.
 It is critical that this effort and responsibility is shared between construction project subsystems, pre-operations and operations technical staff, particularly during knowledge transfer and documentation strategy transition stages.
 The managing groups will complete the Views such that their documentation are organized in a common way and operations staff are capable of managing the content before taking ownership.
 It is expected that no content currently used in construction or pre-operations will be lost.
-This content should be maintained as-is and available for any future needs; however, it is not necessary to incorporate everything into the future documentation scheme described in this proposal.
-A process should be devised to determine if information should be transitioned or archived.
 
 The Documentation Views will fuel the proposed \emph{Documentation Portal}, a web application to provide access and discovery to different documents and documentation types and assisting users in retrieving information and its primary source.
 The proposed architecture includes products already implemented for Rubin Observatory, namely the LSST the Docs (LTD) documentation delivery platform.
-The Documentation Working Group expects the majority of effort for software developers will be understand the use-cases and how group's utilize the Documentation Views in practice and the development of software tools to serve the Documentation Portal via repository metadata.
+The Documentation Working Group expects the majority of effort for software developers will be to understand the use-cases and how various groups utilize the Documentation Views and to development of software tools to serve the Documentation Portal via repository metadata.
 The new Documentation Portal is detailed in Section~\ref{sec:DocPortal}.
 
-Project and team managers with product owners should apply a graded approach to this proposal's recommendations and suggestions, preferably tailoring how the create and manage the Views and workflows for their ability to maintain reliable information throughout operations.
-This proposal is meant to provide guidance and framework for staff responsible for technical information and effectively communicating it, and the Views must be created for their specific needs.
+Information from construction should be maintained as-is and available for any future needs; however, it is not necessary to incorporate everything into the future documentation scheme described in this proposal.
+Project and team managers with product owners should apply a graded approach to this proposal's recommendations and suggestions, preferably tailoring how they create and manage the Views and workflows for their ability to maintain reliable information throughout operations without assuming or requiring a large amount of institutional or system-specific knowledge. 
+A process should be devised to determine if information should be transitioned or archived.
+A goal of the Documentation Working Group was for a system that does not require teams to recreate, reproduce or replace already useful documentation, but as a team transitions their documentation, they should review when that is advantageous.
+
+This proposal is meant to provide guidance and framework for staff responsible for technical information to improve effective communication to internal and external stakeholders, and the Documentation Views must be created for their specific needs.
 If people are having difficulty finding information, determining where the source of truth is located, or managers/auditors cannot determine if construction completeness is being achieved, it's appropriate for the technical group to reflect on how they can expand on using the Documentation Views for improvement.
-While documentation specialist staff will assist in the development and implementation, technical staff that own the information are primarily responsible, and internal or external stakeholders or customers should provide feedback.
-%Examples such as lists and diagrams are provided throughout this document (e.g., Section~\ref{sec:storage-view}, Appendix~\ref{sec:appendix-examples}) to demonstrate the core concepts.
-The Documentation Working Group made an extensive effort to use currently available information for direct application across a small set of systems while validating the proposal.
-They may be used as an initial starting point or adapted to the specific needs and processes of those served by Rubin Observatory.
+While documentation specialist staff will assist in the development and implementation, technical staff that own the information are primarily responsible, and stakeholders and customers should provide feedback.
+The Documentation Working Group made an extensive effort to use currently available information for direct application across a small set of systems to validate this proposal.
+Examples of this work are presented herein, and they may be used as an initial starting point or adapted for those served by Rubin Observatory.
 The Documentation Working Group highly encourages exploiting software to retrieve information from repositories to help or automatically build the Documentation Views.
-%Section~\ref{sec:implementation} includes recommended workflows and a path forward of specific repositories for operations.

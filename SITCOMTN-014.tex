@@ -4,8 +4,10 @@
 \input{meta}
 
 % Package imports go here.
+\usepackage{graphicx}
 
 % Local commands go here.
+\graphicspath{{figures/}} %Setting the graphicspath
 
 %If you want glossaries
 %\input{aglossary.tex}
@@ -17,6 +19,7 @@
 \setDocSubtitle{(Report from the Rubin Observatory Documentation Working Group)}
 
 \author{%
+Matthew Rumore,
 Chuck Claver,
 David Cabrera,
 Rob McKercher,
@@ -26,8 +29,7 @@ Patrick Ingraham,
 Tony Johnson,
 Kristen Metzger,
 Austin Roberts,
-Jonathan Sick,
-Matthew Rumore.
+Jonathan Sick.
 }
 
 \setDocRef{SITCOMTN-014}
@@ -39,9 +41,10 @@ Matthew Rumore.
 \setDocCurator{Matthew Rumore}
 
 \setDocAbstract{%
-This technical note is a report to recommend a future state for Rubin Observatory Operations documentation by the Project-wide Documentation Working Group, as a final deliverable for the charge described in \url{LSE-489.lsst.io}.
+This technical note is a report to recommend a future state for Rubin Observatory Operations documentation by the Project-wide Documentation Working Group.
 This proposal presents a high-level documentation strategy for Rubin Observatory Operations with suggested methodologies to transition Construction Project documents and organizations for the technical documentation package needed to establish construction completeness and operational readiness.
-The presented implementation plan for transitioning includes an estimated level of effort, resources, scheduling and risks if not implemented, as well as a method of sustained maintenance throughout Operations.
+It responds to charge items 3 in the \textit{Charge to the Documentation Working Group}, \citeds{LSE-489}.
+Migration plans, schedule and resources to migrate to the future state for this documentation will be reported in another techincal report, \citeds{RTN-076}.
 }
 
 % Change history defined here.
@@ -53,7 +56,7 @@ The presented implementation plan for transitioning includes an estimated level 
   \addtohist{0.1}{2021-08-30}{Input to Documentation Portal.}{Jonathan Sick}
   \addtohist{0.2}{2021-09-14}{Preliminary content, Portal architecture and effort.}{Chuck Claver, Jonathan Sick}
   \addtohist{0.3}{2022-11-18}{Incorporate draft from Confluence pages and shared files as pre-draft.}{David Cabrera, Matthew Rumore}
-  \addtohist{0.4}{2024-02-16}{Modifications.}{Matthew Rumore}
+  \addtohist{0.4}{2024-03-04}{Finalize roadmap; transfer implimentation content to RTN-076.}{Matthew Rumore, Leanne Guy}
 }
 
 
@@ -78,8 +81,6 @@ The presented implementation plan for transitioning includes an estimated level 
 \input{ImplementationPlan}
 \input{PrimarySources}
 \input{DocumentationPortal}
-\input{DocuSharePath}
-\input{PDMWorksPath}
 
 \newpage
 % Include all the relevant bib files.

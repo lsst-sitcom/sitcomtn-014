@@ -2,7 +2,7 @@
 \label{sec:storage-view}
 
 The purpose of the \emph{Storage View} is to capture the official repositories retaining, archiving, organizing, and accessing Rubin Observatory technical documentation in a reliable, consistent manner for users, developers and management.
-As a fundamental corollary, the Storage View provides a method for departments and technical groups to define the normative source for information, i.e., a single, definitive source of truth.
+The Storage View provides a method for departments and technical groups to define locations for respective normative sources of information.
 With canonical information storage, others can develop associations, links and references to impart information to inter-departmental or external documents or groups, allowing a reduction in replication, reliable information flow, and preservation of informational dependencies.
 Unless mandated by the project, the department or responsible group can choose the manner and method of storing information and transposing information to other locations, in conjunction with the stakeholder(s).
 The primary users are managers, engineers, specialists, technicians, web development staff, system administrators, and documentation specialist.
@@ -25,35 +25,21 @@ This risk has already been realized within the construction project, although of
 Additionally compounding the risk to information access, it becomes increasingly difficult to share information, especially when the repository is ill-defined, uncertainty of what replicated information is the most current, and uncertainty of which repository is the normative source of information.
 Without a discrete set of storage locations, it is impossible to guarantee reliable and navigable information or data across multiple platforms throughout operations.
 
-The Storage View tree is similar to a product tree, with the basis of design a result of the \citeds[Construction Documentation Inventory]{SITCOMTN-012}.
+A Storage View tree is constructed a root-node for a repository and the first set of leaf-nodes capturing the repository's organizational structure and metadata structure.
+Critically, each Storage View tree should readily indicate what are the normative sources of information so it's accurately referable within other Documentation Views.
+It will be the responsibility of the department or technical group to define the organizational structure.
+Software developers require the metadata and repository's organizational structure to design and implement the Documentation Portal, including the development of additional metadata fields with assistance from system administrators.
+
+?Recommendations and suggestions by the Documentation Working Group to transition and use the respiratory in operations are provided, including some suggested repository's organizational structure.
+
 This section summarizes some important details from the document, but \citeds{SITCOMTN-012} includes more information such as the inventory for each repository.
-Each repository is a root-node, similar to a Level-1 product, and the first set of leaf-nodes captures the location's organizational structure and its metadata structure.
-Critically, the Storage View trees should readily indicate what are the normative sources of information so other Documentation Views can reliably refer to the accurate and up-to-date information.
-It will be the responsibility of the department or technical group to define the organizational structure, with documentation specialists assisting in developing a consistent approach across the project and sharing lessons learned between groups.
-Software developers require the metadata and its structure to develop the Documentation Portal, including the development of additional metadata fields with assistance from system administrators.
-Metadata information was not surveyed by the Documentation Working Group; however, metadata fields and structure must be documented for development, changes and implementation of the Documentation Portal.
-Recommendations and suggestions by the Documentation Working Group to transition and use the respiratory in operations are provided, including some suggested repository's organizational structure.
-The level of effort and schedule impacts are included where appropriate.
 
 \subsubsection{DocuShare}
 
 Xerox\textregistered\ DocuShare\textregistered\ content management system \citep{DocuShare-cite} is the Construction Project's official document repository.
 It was selected during the design and development phase to meet the NSF requirement for a document management system.
-The Construction Project Office expects DocuShare to be the repository for official versions of management policies, plans and procedures, design documents, safety documentation, hazard analyses, released requirements and interface control documents generated from the SysML model, and project standards, guidelines and templates (this list is not intended to be exhaustive).
-
-Three of DocuShare's advantages are handles, version control and co-location.
-Each object has a unique identifier called a handle, which follows the object regardless of versioning or location(s) in the directory structure (called collections).
-Each handle has a version history that lists all previously uploaded files for the object in question.
-One of those versions is designated as the preferred version, which represents the document's official, approved version and is served by the database when clicking the object's title or from a properly formatted URL shared or hosted outside of DocuShare.
-The object's handle does not change when/if a new version of the document is created.
-Lastly, objects can appear simultaneously in as many collections as are necessary and/or relevant to the document.
-This is facilitated by an object's "locations" property; locations are added as appropriate, and the handle automatically appears in the newly added collection.
-The combination of handles, versioning and co-location creates a system where each document is represented by a single record, avoiding duplication and/or version confusion.
-
-The web interface for DocuShare is \href{https://docushare.lsstcorp.org/docushare/dsweb/HomePage}.
-Currently, DocuShare contains more than $30,000$ documents in more than $10,000$ collections.
-Creation, retention and version control of those documentation classes generally have been well managed; however, the bulk of DocuShare documents likely represents objects created ad hoc by general project staff for specific purposes.
-In addition, there are thousands of pieces of work product that may have archival significance but likely will not be useful for Operations.
+The Construction Project Office expects DocuShare to be the repository for official versions of management policies, plans and procedures, design documents, safety documentation, hazard analyses, released requirements and interface control documents generated from the SysML model, and project standards, guidelines and templates.
+This list is not intended to be exhaustive.
 
 As a tool heavily used by the project, it is recommended to continue the use of DocuShare into operations.
 Operations should use the DocuShare instance currently in use by the construction project with the Archive Server add-on enabled, as the continuity afforded by doing so is important and useful.
@@ -70,7 +56,6 @@ As for construction documentation, it is recommended to have a consistent organi
 The archiving process should include a determination by the department if the information is useful in operations (determining if it should be archived) and if the information should be queryable in the archive (e.g., raw data).
 This is especially topical for vendor documentation and deliverables.
 
-See Section \ref{sec:docushare-path} for a detailed discussion on the reasoning, recommended actions and expected resources to implement and maintain DocuShare in operations.
 A more detailed analysis of arguments and considerations for this proposal's recommendation is available in DocuShare Options Trade Study for the Documentation Working Group. \citedsp{Document-36788}
 
 \subsubsection{LSST the Docs (www.lsst.io)}
@@ -96,17 +81,6 @@ Users can also browse other versions of the documentation through the "/v/" dash
 LTD hosts two types of documentation projects: \emph{guides} and \emph{documents}.
 Guides are multi-page websites convenient for user interaction and navigation (e.g., \href{developer.lsst.io}{Data Management Developer Guide}, T\&S software guides at \url{https://obs-controls.lsst.io}).
 Documents are "single-page" artifacts, analogous to documents that might be found in DocuShare, and they are sometimes referred to as \emph{technical notes} (shortened to "technote" or an appended "TN") --- see \href{https://sqr-000.lsst.io}{SQR-000: The LSST DM Technical Note Publishing Platform} for the motivation to create technical notes. \citedsp{SQR-000}
-Though not required, guides are generally authored using an open-source tools using themes that is maintained by the SQuaRE team via documenteer \cite{documenteer-cite} (see \url{https://documenteer.lsst.io/} for corresponding guide).
-Besides documentation tied to specific software projects or services, guides can also collect procedures for teams, see the DM Developer Guide (\url{https://developer.lsst.io}) or the Observatory Operations Documentation (\url{https://obs-ops.lsst.io}).
-
-DM has embraced the use of LTD by hosting a guide on lsst.io for every software project or service.
-Further, DM has developed most of its change-controlled documents (LDM) on its lsst.io site to take advantage of the sophisticated collaboration features that GitHub offers (for an example, see \url{https://ldm-151.lsst.io}).
-Change-controlled documents are submitted to DocuShare for archival once approved using a release process mediated through GitHub, Jira, and the relevant control board.
-LTD is currently hosting documents from the DMTR, LDM, LPM, LSE, and SCTR document series (note that this includes test and verification reports).
-
-A prime example of the LTD and GitHub tools used by the project for operations activities is the T\&S Commandable Service Abstraction Layer (SAL) Component (CSC) XML package and user guides, as summarized by \url{https://ts-xml.lsst.io}.
-The CSC data objects are defined in XML for SAL to consume and produce language-specific libraries that enable communication over the Data Distribution System (DDS) network.
-These XML files are critical for defining the configuration and interaction of the systems within the Summit Facility observing environment.
 
 A unique example is the homepage for the LTD documentation platform, \url{https://www.lsst.io}, which serves as a portal for LTD indexed documentation for searches and faceted browsing capabilities. \citep{lsst.io-cite}
 Users can search across metadata and full text (this feature is powered by the commercial service Algolia \citep{Algolia-cite} in conjunction with a scraper bot built by SQuaRE) or browse through curated collections.
@@ -140,9 +114,6 @@ Currently, the LSSTC Jira instance includes the following normative source of in
 (2) construction-related risks, opportunities and mitigations,
 (3) the Failure Reporting Analysis and Corrective Action System (FRACAS) for failures and corrective actions,
 and (4) hazard mitigation verification.
-However, it is required operations include risks, opportunities and mitigations in the NOIRLab managed risk management software tool, Alcea Tracking Solutions software \url{https://noirlab.alceatech.com/saml2/sso}.
-The project must determine if the normative source for information on risk, opportunities and mitigations will continue to be Jira or moved to the NOIRLab risk management tool.
-If Jira is the normative source of information for these items, the project must develop a method to sync information to the NOIRLab tool.
 
 As tools that are heavily used by the project, it is recommended to continue the use of Confluence and Jira into operations.
 With a wiki like Confluence which that integrates well with Jira, the two are especially convenient for rapidly developing new ideas, taking and storing meeting minutes, collecting information in interactive tables, and drafting outlines for future documentation, all while tracking the tasks and being able to actively report on status.
@@ -156,32 +127,21 @@ Most spaces have a relatively small number of top-level pages which are tailored
 The Jira branch would begin with the projects, but the next level nodes are not as apparent and should be determined by the owner or responsible group.
 There are many ways to create the next level nodes for Jira; for example, most projects have a natural breakdown of structure used to organize relationships between tickets (e.g., epics).
 Lower-level nodes will depend on use; they could include items such as meeting notes or customized dashboards.
-The NOIRLab risk tool should also have a branch in the Storage View.
 
 \subsubsection{Engineering models in Solidworks Product Data Management (PDM)}
 
 Solidworks Product Data Management (PDM) Professional \citep{PDM-cite} is the official computer-aided design (CAD) model repository for the Telescope and Site construction group, including vendor documentation and deliverables.
-It uses a check-out / check-in system to allow configuration management of the design.
-Each check-in produces a new version of the part or assembly.
-Earlier versions can be accessed if needed to compare designs or revert to an earlier design.
+It uses a check-out / check-in system to allow configuration management of the design where earlier versions can be accessed if needed to compare designs or revert to an earlier design.
 A workflow feature allows the designs to go through a review process until the design is approved and locked from further changes.
 A revision process is also included in the workflow to allow for changes to the designs if needed after final approval.
-The software allows for vault replication at multiple sites and the project currently has a server operating in Tucson, Arizona and Chile to support CAD users at multiple sites.
-Solidworks PDM is the normative source of information for system decomposition.
-
 The current configuration of the PDM vault contains top-level access to baseline design data and interface control documents (ICDs) (drawings) along with as-designed vendor subsystems.
-This includes the original baseline design, early designs and further development throughout construction.
-In addition, a series of design and drafting standards is also stored in the PDM system.
-Two servers are hosted: the main server located in Tucson, Arizona, and a replicated server in La Serena, Chile to allow faster file access.
+Solidworks PDM is the normative source of information for system decomposition.
 
 In operations, as-built design information will be needed to help with logistics planning for maintenance and future design upgrades.
 No information has been deleted or archived at this time.
 The Documentation Working Group recommends the vault is reorganize so that legacy data is archived for access but is not easily mistaken for as-built design data.
-This will require a full-time resource for 3 to 6 months.
 The specific structure for the branch of the Storage View is highly dependent on this reorganization.
 For example, the high-level nodes could be by subsystem or physical location, lifecycle of particular drawings (e.g., as-designed, as-built), or use within specific states of the telescope (e.g., on-sky imaging, preventive maintenance shutdown).
-
-See Section \ref{sec:pdm-path} for a detailed discussion on the reasoning, recommended actions and expected resources to implement and maintain Solidworks PDM in operations.
 
 \subsubsection{MagicDraw}
 
@@ -207,8 +167,9 @@ Details on how Rubin Observatory uses MagicDraw are included in the user guides 
 It is recommended to continue the use of MagicDraw into operations.
 The user guides should be relocated into a more appropriate storage location, such as lsst.io.
 The content in MagicDraw should be reviewed to create the tree for the Storage View that can readily reflect normative sources of information and how/what references or depends on this information.
+It is crucial that the normative source of information is clearly defined between MagicDraw and other repositories which are synced or used for archival purposes, as well as the workflow and method to do so.
 The effort required to complete the FMEA information will depend on the level of completeness when handed over to operations.
-Effort to sync the structural decomposition with Solidworks will be evaluated when the system information is more complete.
+Effort to sync the structural decomposition with Solidworks can be evaluated when the system information is more complete.
 
 \subsubsection{Euporie}
 
@@ -229,8 +190,8 @@ Repositories are owned by individual users or an \emph{organization}, and organi
 
 The Rubin Observatory construction and operations projects use a large number of GitHub repositories, organizations and teams, primarily to ease access control.
 The main project GitHub organization is \url{https://github.com/lsst}; however, not all operations software is found in this organization.
-On the construction project, each subsystem on the construction project generally has its own GitHub organization, though in some cases subsystems have additional GitHub organizations for specific teams or projects.
-For example, the Science Platform software is contained in \url{https://github.com/lsst-sqre}, Telescope \& Site software in \url{https://github.com/lsst-ts}, EPO software in \url{https://github.com/lsst-epo} and Camera software in several organizations.
+GitHub organizations with operational software and documentation will likely transition smoothly to Operations teams.
+Particular attention will need to be paid to maintaining organizations that no longer have an active team associated with them.
 
 As a heavily used tool by the project, it is recommended to continue the use of GitHub via git into operations.
 Effort by construction, pre-operations and operations teams already implemented infrastructure for utilization and the GitHub collaboration structure, including basic structure for operations.
@@ -238,7 +199,7 @@ There are a large number of repositories containing the normative source of info
 
 \subsubsection{Drupal}
 
-Drupal \citep{drupal-cite} is an open source web content management framework used by the project for its websites’ back-end, including \url{https://www.lsst.org}, \url{https://project.lsst.org} and sites created to facilitate project meetings and reviews.
+Drupal \citep{drupal-cite} is an open source web content management framework used for project websites’ back-end, including \url{https://www.lsst.org}, \url{https://project.lsst.org} and sites created to facilitate project meetings and reviews.
 To avoid the complication of having to make multiple site updates when content changes, these documents of each of these sites are served by hyperlinks that pull files from whatever repositories contain their normative sources of information.
 While it is possible to upload discrete files to a specific site’s server location, by policy and standard the project eschews doing so.
 
@@ -246,17 +207,21 @@ The major exception is regarding project-level meetings and reviews sites, such 
 Their site directories contain document and presentation files in order to preserve the content presented at the time.
 At the conclusion of the event, these files are uploaded to DocuShare in a collection specific to the event.
 Documents such as policies, requirements, and design documents are uploaded as a ZIP file to preserve a snap-shot while preventing replication and multiple handles that may cause confusion with the normative source of information.
-The method described for project-level meetings and reviews may not be implemented by all subsystems on the construction project, and the project must consider if and how to archive this information.
 
-The project must consider if and how its appropriate to continue using Drupal for web content management into operations.
-If used in operations, it must be clear how and where normative sources of information are used (e.g., DocuShare).
 It must be determined the level of change control appropriate for websites, as well as files in site directories or hyperlinked files without change control.
+The project must consider if and how its appropriate to continue using Drupal for web content management into operations.
+The method described for project-level meetings and reviews may not be implemented by all subsystems on the construction project, and the operations project must consider if and how to archive this information.
+If used in operations, it must be clear how and where normative sources of information are used (e.g., DocuShare).
+If discontinued, the project should verify all required archival information is transferred to an actively supported repository (e.g., DocuShare).
 
 \subsubsection{LSSTCam information}
 
-There are multiple storage locations for information, documents and data produced during the MIE effort for LSSTCam:
+There are multiple storage locations for information, documents and data produced during the MIE effort for LSSTCam.
+A majority of this information is captured in eTraveler (prod/dev), the Data Portal (prod/dev), the Data Catalog (prod/dev), Confluence, Jira, DocuShare, and GitHub.
 
-
+The project must review which repositories will be in active support throughout operations.
+Data within repositories that are not be actively supported or available may be lost.
+For repositories that may not be available throughout operations, the project should consider which information should be transferred for future use in operations or archived for future retrieval.
 
 \subsubsection{Engineering Facility Database (EFD)}
 
@@ -268,12 +233,24 @@ There are multiple storage locations for information, documents and data produce
 
 \subsubsection{Verification reports}
 
+The Rubin Observatory Verification Architecture used for construction and commissioning activities is composed of our MagicDraw model, Jira with Test Manager application, and Syndeia to synchronize data between MagicDraw and Jira.
+For all verification events performed by the SIT-COM team, a SIT-COM Test Plan/Report (SCTR) is created setting the standard for verification execution and results.
+The SCTR/DMTR is generated using the Jira REST API pulling the information from the verification objects.
+Formal detailed records of each verification done by Rubin Observatory is in the LSST Verification and Validation Jira project, with reports published to lsst.io as a SCTR or DMTR in addition to archiving it into DocuShare.
 
+Similar to MagicDraw, it is crucial that the normative source of information is clearly defined between MagicDraw and other repositories which are synced or used for archival purposes, as well as the workflow and method to do so.
 
 \subsubsection{CMMS}
 
 
 
-\subsubsection{NOIRLab Risk Tool}
+\subsubsection{NOIRLab Alcea Risk Tool}
 
+The Rubin Observatory is required to include risks, opportunities and mitigations in the NOIRLab managed risk management software tool, Alcea Tracking Solutions software \url{https://noirlab.alceatech.com/saml2/sso}.
+The Rubin Observatory information is exported and archived in GitHub by operations staff, and a user guide for the Rubin Observatory is available at \href{https://rtn-051.lsst.io/}.
+Access will be limited to those using the tool directly and designees.
+Given the limited access, the project expects to use Jira for detailed planning and analysis.
 
+The project should confirm that the normative source for information for risk, opportunities and mitigations will be Jira.
+Assuming Jira will be used, the type or criteria of risks, opportunities and mitigations required to be included in the Alcea Risk Tool must be defined and agreed upon between the project and NOIRLab.
+Additionally, a workflow, method and/or software must be developed by the project to ensure information is consistently synced at an agreed upon frequency.
