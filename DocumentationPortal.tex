@@ -1,4 +1,4 @@
-\subsection{The Documentation Portal}
+\section{The Rubin Documentation Portal}
 \label{sec:DocPortal}
 
 The Documentation Working Group recommends the creation of a \emph{documentation portal} web application as a means of making documentation content discoverable and accessible to Rubin Observatory staff.
@@ -10,31 +10,31 @@ The new Documentation Portal discussed herein is based upon the website \href{ww
 The new portal will be accessible only those with Rubin Observatory staff credentials, and will be purpose-built for observatory and survey operations.
 This section describes the design principles, technical architecture, security model, and cost estimate of the Rubin Observatory Documentation Portal.
 
-\subsubsection{Design requirements}
+\subsection{Design drivers}
 
-The design requirements of the Documentation Portal reflect the recommendations made by the Documentation Working Group elsewhere in this report:
+The following are high-level design drivers for the future-state Rubin Documentation Portal. 
+They reflect the recommendations made by the Documentation Working Group presented in this report.
 
-\begin{enumerate}
-  \item The role of the Documentation Portal is to link to documentation resources.
+\textbf{The role}  of the Documentation Portal is to link to documentation resources.
   The portal itself does not host the content itself, nor provide user interfaces for creating and maintaining new versions of documentation content.
   This requirement reflects the Documentation Working Group's recommendation that documentation content should be hosted on a select set of platforms that are idiomatic for the content and the teams that work with that content (Section \ref{sec:primary-sources}).
 
-  \item The Documentation Portal must provide equal support for content stored in any of the storage platforms (Section \ref{sec:storage-view}).
+The Documentation Portal must provide equal support for content stored in any of the storage platforms (Section \ref{sec:storage-view}).
 
-  \item The Documentation Portal must be capable of supporting several hierarchical browsing schemes for accessing content based on different organizational views of the documentation (Section \ref{sec:views}).
+The Documentation Portal must be capable of supporting several hierarchical browsing schemes for accessing content based on different organizational views of the documentation (Section \ref{sec:views}).
 
-  \item The Documentation Portal should automatically update and sort documentation content, to the greatest extent possible.
+The Documentation Portal should automatically update and sort documentation content, to the greatest extent possible.
   In other words, curators should only need to maintain documentation in the document's storage platform, without any administrative action through the Documentation Portal's user interface or infrastructure.
   A consequence of this requirement is that the Documentation Portal should not persist information about a document that is not available from the document's own storage platform.
 
-  \item The Documentation Portal should be secured so that it is only accessible to users with Rubin Observatory staff credentials.
+The Documentation Portal should be secured so that it is only accessible to users with Rubin Observatory staff credentials.
 
-  \item The Documentation Portal should not maintain fine-grained access control for specific documents or categories of documents.
+The Documentation Portal should not maintain fine-grained access control for specific documents or categories of documents.
   For secured documents, the portal relies upon the security mechanisms of the document's own storage platform.
   The portal should also reduce its metadata storage of confidential documents to ensure that content cannot be inferred from a search, for example.
-\end{enumerate}
 
-\subsubsection{Technical architecture}
+
+\subsection{Technical architecture}
 
 The architecture described here is based upon that which is already put into production with the \href{www.lsst.io} portal for public-facing documentation.
 Starting from this working archetype relieves a great deal of technical risk and development from the new portal's implementation.
@@ -44,12 +44,12 @@ The Documentation Portal will also use a separate instance of the Algolia databa
 
 Figure \ref{fig:portal-architecture} depicts the components of the Documentation Portal.
 
-\begin{figure}[t]
+\begin{figure}[hp!]
+\centering
+\includegraphics[width=0.95\textwidth]{portal-architecture}
 \caption{Architecture of the Proposed Documentation Portal.
 Users find documents on the web portal application, which in turn provides links into the original documentation repositories.
 Data in the portal application is supplied by the Algolia search service \citep{Algolia-cite}, which in turn gets its metadata from the original documents in their repositories via the Ook indexing service \citep{ook-cite}.}
-\centering
-\includegraphics[width=\textwidth]{portal-architecture}
 \label{fig:portal-architecture}
 \end{figure}
 
@@ -116,14 +116,14 @@ The front-end application will be accessible only to users who log in.
 The simplest way to approach this is by putting the application behind a VPN so that the application is completely separate from security concerns.
 Another approach would be to place the application behind an OAuth proxy to provide a slightly better user experience.
 
-\subsubsection{Support for multiple views}
+\subsection{Support for multiple views}
 
 In Section \ref{sec:views}, the Documentation Working Group outlines several views for hierarchically arranging documents trees.
 These views correspond to navigational structures in the front-end application.
 Although the front-end application code is generally "aware" of the different trees, individual documents are placed in the tree on the basis of metadata in their Algolia records, so that the Algolia service can pre-sort and filter documents into the trees.
 Since Ook supplies metadata to Algolia, and Ook in turn leverages metadata native to the document and the document's repository, the responsibility for curating documents into different views is the responsibility of individuals managing documents in each repository.
 
-\subsubsection{Information security}
+\subsection{Information security}
 
 Documentation has multiple types of security concerns, such as control over who and how documents are updated, control over who can access documents, and ensuring the long term integrity and preservation of information.
 Since the Documentation Portal is not the canonical repository for any documentation, the portal is not involved in controlling document updates and preservation.
@@ -145,23 +145,3 @@ In order of strictness, the following approaches can be used:
 \end{enumerate}
 
 In all cases, controlling how documents are indexed is done by configuring the indexing service, Ook.
-
-\subsubsection{Effort estimate}
-
-The key tasks for implementing this plan are:
-
-\begin{enumerate}
-  \item Building additional content indexing workflows into Ook and updating the metadata schema to accommodate all use cases.
-  \item Build the Documentation Portal web application.
-  \item Curate documents so that they are uniformly present in their document repositories and have any metadata that is expected by the Ook indexing workflows.
-  This can be distributed to teams working in each document repository.
-  \item Support for continual maintenance and additional features (e.g., new content types).
-\end{enumerate}
-
-To provide a sense of the scale of the first two tasks, the implementation of the \href{www.lsst.io} portal is a useful reference.
-Building the first version of Ook, which indexes LaTeX documents and Sphinx-based technical notes in lsst.io required four weeks of work.
-Building the front-end website required six weeks.
-
-Since that original implementation, the SQuaRE team has gained more experience building React web applications and working with Algolia, so it is reasonable to expect less than four weeks of work to build out the internal web application.
-Although Ook can be expanded as-is, the key uncertainly is in the number and complexity of the additional indexing pipelines that need to be built for additional document types and repositories.
-Generally, though, an internal Documentation Portal can likely be stood up within one to three months, with a potential long tail of effort to continue to add support for additional content types.
