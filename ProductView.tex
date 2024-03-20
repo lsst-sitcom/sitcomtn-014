@@ -64,7 +64,7 @@ Teams can and should create product trees that refer to documentation and ensure
 For example, this can take the form of a diagram coupled with a narrative, potentially with different representations between leaf-nodes.
 Within the Product View as a whole, consisting of many product trees, it is intended systems and subsystems refer to higher- or lower-level product trees to reduce replication and the risk of confusing users accessing information between the group(s) and stakeholder(s).
 Furthermore, the referential nature can be applied for interdepartmental information and dependencies so it's clear which department owns the information and any departments which utilize it.
-For example, an interface control document (ICD) and an N-squared diagram could be sufficient references to describe \textit{Inter-department Interfaces}.
+For example, an interface control document (ICD) and an N-squared diagram could be sufficient references to describe the category \textit{Inter-department Interfaces}.
 
 Here are the generic categories:
 
@@ -154,34 +154,39 @@ Here are the generic categories:
 
 Here are two examples of product tree referencing, using Auxiliary Telescope (AuxTel), LSSTCam and Commissioning Camera (ComCam).
 Note that it would be beneficial to design product trees which take advantage of the similarities between LSSTCam and ComCam, even though there will be major differences, too.
+
 For these three systems, the Access Interfaces category would include a common set of software, e.g., LSST Observing Visualization Environment (LOVE), Nublado (Jupyter) interface, Script Queue, Watcher.
 This common set of software could be included in a higher-level product tree (potentially a Level-2 product under the Observatory Operations department) or as a referential Level-2+ product trees; then, not only is the information referenced to all three efficiently, but the software product tree(s) can be designed to easily indicate differences between the three systems, say, for the Software Development categories.
-As a second example, the three systems interface with a set of external systems simultaneously connected to them, e.g., Engineering Facility Database (EFD), Environmental Awareness System (EAS), Global Interlock System (GIS).
+
+The three systems interface with a set of external systems simultaneously connected to them, e.g., Engineering Facility Database (EFD), Environmental Awareness System (EAS), Global Interlock System (GIS).
 These external systems could also be set up as referential product trees which are referenced by AuxTel, LSSTCam and ComCam, as well as others.
 
-Figure \ref{fig:product-view-departments} depicts the Rubin Observatory departments and a subset of their systems and products into Level-1 products, with some Level-2+ products included.
-
-[\begin{figure}[htp!]]
-\centering
-\includegraphics[width=\textwidth]{product-view-departments-decomposition}
-\caption{Example of Department Decomposition at System and Subsystem Level.}
-\label{fig:product-view-departments}
-\end{figure}
-
-Figure \ref{fig:product-view-auxtel-technical-design} is a more comprehensive example depicting the Technical Design high-level category from the generic categories.
-Each subcategory (yellow) and each sub-subcategory (blue) is addressed such that the reader has an idea of what the system is, how it is used, and documentation with references therein for retrieving critical information.
+Figure \ref{fig:product-view-departments-example} depicts the Rubin Observatory departments and a subset of their systems and products into Level-1 products, with some Level-2+ products included.
 
 \begin{figure}[htp!]
 \centering
-\includegraphics[width=\textwidth]{product-view-auxtel-product-tree-technical-design}
-\caption{Example of Technical Design Generic Category from Product View, for an Auxiliary Telescope Subsystem.}
-\label{fig:product-view-auxtel-technical-design}
+\includegraphics[width=\textwidth]{product-view-departments-decomposition-example}
+\caption{Example of Department Decomposition at System and Subsystem Level.}
+\label{fig:product-view-departments-example}
 \end{figure}
 
-Note that while it may seem Figure \ref{fig:product-view-departments} and Figure \ref{fig:product-view-auxtel-technical-design} are part of one example, that is not the intended purpose.
-As described in the first example regarding AuxTel, LSSTCam and ComCam, it would be beneficial to organize the Product View to leverage the replicated information such as common software.
+Figure \ref{fig:product-view-auxtel-technical-design-example} is a more comprehensive example of AuxTel, depicting the Technical Design generic category.
+Each category (yellow) and each subcategory (blue) from the Technical Design is addressed such that the reader has an idea of what the system is, how it is used, and documentation with references therein for retrieving critical information.
+Note that physical interfaces are not address in the example.
+
+\begin{figure}[htp!]
+\centering
+\includegraphics[width=\textwidth]{product-view-auxtel-product-tree-technical-design-example}
+\caption{Example of Technical Design Generic Category from Product View, for an Auxiliary Telescope Subsystem.}
+\label{fig:product-view-auxtel-technical-design-example}
+\end{figure}
+
+While it may seem Figure \ref{fig:product-view-departments-example} and Figure \ref{fig:product-view-auxtel-technical-design-example} are part of one example, that is not the case.
+As previously described, it would be beneficial to organize the Product View to leverage the replicated information such as common software.
 This was not considered for the two figures.
 
+As another example of the Product View, Table \ref{table:product-view-department-ownership-example} shows how multiple departments can separate their responsibilities between a few high-level requirements and operational needs.
+With well defined responsibilities, teams can communicate more effectively and the normative source of information should be identifiable.
 
 \begin{table}[]
 \begin{tabular}{|l|l|l|l|}
@@ -191,5 +196,5 @@ This was not considered for the two figures.
 \textbf{Procedures} & \begin{tabular}[c]{@{}l@{}}Day/Night Shift Turn-over,\\ Energy Isolation Protocols,\\ Calibration Procedures\end{tabular} & \begin{tabular}[c]{@{}l@{}}Predictive Analysis,\\ Hazard Validation\end{tabular} & \begin{tabular}[c]{@{}l@{}}Data Release and\\ Prompt Alerts\\ Processing\end{tabular} \\ \hline
 \textbf{Evaluation} & \begin{tabular}[c]{@{}l@{}}Verification Test Plans,\\ Failure Effects,\\ Test Reports\end{tabular} & \begin{tabular}[c]{@{}l@{}}Failure Mode and\\ Effect Analysis\end{tabular} & \begin{tabular}[c]{@{}l@{}}Assertion\\ Testing\end{tabular} \\ \hline
 \end{tabular}
+\label{table:product-view-department-ownership-example}
 \end{table}
-

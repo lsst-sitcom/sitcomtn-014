@@ -4,7 +4,7 @@
 The purpose of the \emph{Storage View} is to capture the official repositories retaining, archiving, organizing, and accessing Rubin Observatory technical documentation in a reliable, consistent manner for users, developers and management.
 The Storage View provides a method for departments and technical groups to define locations for respective normative sources of information.
 With canonical information storage, others can develop associations, links and references to impart information to inter-departmental or external documents or groups, allowing a reduction in replication, reliable information flow, and preservation of informational dependencies.
-Unless mandated by the project, the department or responsible group can choose the manner and method of storing information and transposing information to other locations, in conjunction with the stakeholder(s).
+Unless mandated by the project, the department or responsible group, in conjunction with the stakeholder(s), can choose the manner and method of storing information and transposing information to other locations.
 The primary users are managers, engineers, specialists, technicians, web development staff, system administrators, and documentation specialist.
 
 To ensure a high degree of reliability, it is crucial staff store all operational and historical information within officially designated locations.
@@ -15,8 +15,8 @@ As a shared responsibility between system administrators and departments, all of
 System administrators must ensure access throughout operations (e.g., readily available and backed-up) and a level of expertise must be on-hand for maintenance, issues and general assistance to staff.
 Departments and staff must maintain their information and its organization within the repositories.
 They should recognize and act when information or utilization becomes outdated or unused as to prevent large amounts of depreciated content, stress on storage and bit rot.
-This is especially important to the development, deployment and maintenance of the Documentation Portal architecture (Section \ref{sec:DocPortal}), as leveraging specific use cases and repository's native or project-developed metadata fields are key components.
-Additionally, this effort will better suit the project and departments to formalizing a long-term organizational structure of each repository, create customized workflows, transition to the Documentation Views, and implement new or updated documentation.
+This is especially important to the development, deployment and maintenance of the Rubin Documentation Portal architecture (Section \ref{sec:DocPortal}), as leveraging specific use cases and repository's native or project-developed metadata fields are key components.
+Additionally, this effort will better suit the project and departments by formalizing a long-term organizational structure of each repository, create customized workflows, transition to the Documentation Views, and implement new or updated documentation.
 
 Non-official storage locations pose unique operational and managerial risks which can lead to information and data loss, increased information security risks, and impact to the project's schedule and budget.
 This includes information control (e.g., access, enforced version control, archiving), reliable data recovery, unknown or unplanned risks, and lack of available support (e.g., available labor, expertise).
@@ -28,11 +28,10 @@ Without a discrete set of storage locations, it is impossible to guarantee relia
 A Storage View tree is constructed a root-node for a repository and the first set of leaf-nodes capturing the repository's organizational structure and metadata structure.
 Critically, each Storage View tree should readily indicate what are the normative sources of information so it's accurately referable within other Documentation Views.
 It will be the responsibility of the department or technical group to define the organizational structure.
-Software developers require the metadata and repository's organizational structure to design and implement the Documentation Portal, including the development of additional metadata fields with assistance from system administrators.
+Software developers require the metadata and repository's organizational structure to design and implement the Rubin Documentation Portal, including the development of additional metadata fields with assistance from system administrators.
 
-?Recommendations and suggestions by the Documentation Working Group to transition and use the respiratory in operations are provided, including some suggested repository's organizational structure.
-
-This section summarizes some important details from the document, but \citeds{SITCOMTN-012} includes more information such as the inventory for each repository.
+This section summarizes some important details from \citeds{SITCOMTN-012}; however, that document includes detailed information, such as the inventory for each repository.
+Recommendations from the Documentation Working Group for the repositories are provided, including transitional plans, future in operations, and some suggested repository's organizational structure.
 
 \subsubsection{DocuShare}
 
@@ -45,8 +44,6 @@ As a tool heavily used by the project, it is recommended to continue the use of 
 Operations should use the DocuShare instance currently in use by the construction project with the Archive Server add-on enabled, as the continuity afforded by doing so is important and useful.
 Under this model, the construction project content would be moved to the archive server, and the active server would contain only operations and operations-relevant construction content following an agreed-upon directory structure.
 Until this transition is completed project-wide, the current location for operational documentation is \href{https://docushare.lsstcorp.org/docushare/dsweb/View/Collection-602}{Collection-602}.
-Documentation specialists have been encouraging sub-system staff to organize objects in this collection and store operations information therein.
-In the few cases of feedback, this new setting has been positively received, citing the DocuShare structure for construction is difficult to understand and unintuitive for new staff, especially for operations staff.
 
 The suggested DocuShare branch of the Storage View for operations starts with the a collection for each department.
 Additional collections can be created based on the project's needs as a whole (e.g., interdepartmental items such as widely used software tools).
@@ -137,9 +134,10 @@ A revision process is also included in the workflow to allow for changes to the 
 The current configuration of the PDM vault contains top-level access to baseline design data and interface control documents (ICDs) (drawings) along with as-designed vendor subsystems.
 Solidworks PDM is the normative source of information for system decomposition.
 
+It is recommended to continue use of PDM vault into operations.
 In operations, as-built design information will be needed to help with logistics planning for maintenance and future design upgrades.
 No information has been deleted or archived at this time.
-The Documentation Working Group recommends the vault is reorganize so that legacy data is archived for access but is not easily mistaken for as-built design data.
+If continued into operations, it is recommended the vault is reorganize so that legacy data is archived for access but is not easily mistaken for as-built design data.
 The specific structure for the branch of the Storage View is highly dependent on this reorganization.
 For example, the high-level nodes could be by subsystem or physical location, lifecycle of particular drawings (e.g., as-designed, as-built), or use within specific states of the telescope (e.g., on-sky imaging, preventive maintenance shutdown).
 
@@ -208,31 +206,29 @@ Their site directories contain document and presentation files in order to prese
 At the conclusion of the event, these files are uploaded to DocuShare in a collection specific to the event.
 Documents such as policies, requirements, and design documents are uploaded as a ZIP file to preserve a snap-shot while preventing replication and multiple handles that may cause confusion with the normative source of information.
 
+It is recommended for the project to evaluate the need for web content management in operations.
+If needed, the project should consider if other tools planned for operations would fulfill the same need, or if Drupal should be continued into operations.
 It must be determined the level of change control appropriate for websites, as well as files in site directories or hyperlinked files without change control.
-The project must consider if and how its appropriate to continue using Drupal for web content management into operations.
-The method described for project-level meetings and reviews may not be implemented by all subsystems on the construction project, and the operations project must consider if and how to archive this information.
-If used in operations, it must be clear how and where normative sources of information are used (e.g., DocuShare).
-If discontinued, the project should verify all required archival information is transferred to an actively supported repository (e.g., DocuShare).
+Since the method described for project-level meetings and reviews may not be implemented by all subsystems on the construction project, it is recommended the project review the content to ensure historical information is preserved appropriately.
+If Drupal is discontinued, it is recommended the project review if all required archival information is transferred to the new web content management system and/or an actively supported repository (e.g., DocuShare).
+If web content management is controlled to the same degree as construction, it is recommended that the project provide a clear workflow of how and where normative sources of information is used and stored.
 
 \subsubsection{LSSTCam information}
 
-There are multiple storage locations for information, documents and data produced during the MIE effort for LSSTCam.
-A majority of this information is captured in eTraveler (prod/dev), the Data Portal (prod/dev), the Data Catalog (prod/dev), Confluence, Jira, DocuShare, and GitHub.
+During construction, the Camera used a set of web-based tools used across multiple sites during the testing and construction of the Camera and its subcomponents --- eTraveler, Data Portal and Data Catalog.
+Databases and servers managed by SLAC used these tools to capture procedure, testing data, track component/assembly status and information, and track the acceptance and non-conformance reports.
+Both the "prod" and "dev" instances including information on production parts.
+Additionally, there is construction information stored in a SLAC-hosted instance of Confluence and Jira.
 
-The project must review which repositories will be in active support throughout operations.
+It is recommended the project review the information to determine the type of information and method by which it is archived to an actively supported repository (e.g., DocuShare).
 Data within repositories that are not be actively supported or available may be lost.
 For repositories that may not be available throughout operations, the project should consider which information should be transferred for future use in operations or archived for future retrieval.
 
-\subsubsection{Engineering Facility Database (EFD)}
-
-
-
 \subsubsection{Primavera P6}
 
-Primavera P6 is a Project Portfolio management tool from Oracle. 
-In Construction it was used for planning, managing, and executing the Construction project. 
-It is recommended that the P6 record of the Construction project be exported and saved at the end of the Project;  its use will not continued into Operations. 
-
+Primavera P6\textregistered\ is a project portfolio management tool by Oracle\textregistered\ Corporation. \citep{P6-cite}
+It was used for planning, managing, and executing the Construction project.
+It is recommended that the P6 record of the Construction project be exported and saved at the end of the Project; its use will not continued into Operations.
 
 \subsubsection{Verification reports}
 
@@ -241,12 +237,19 @@ For all verification events performed by the SIT-COM team, a SIT-COM Test Plan/R
 The SCTR/DMTR is generated using the Jira REST API pulling the information from the verification objects.
 Formal detailed records of each verification done by Rubin Observatory is in the LSST Verification and Validation Jira project, with reports published to lsst.io as a SCTR or DMTR in addition to archiving it into DocuShare.
 
-Similar to MagicDraw, it is crucial that the normative source of information is clearly defined between MagicDraw and other repositories which are synced or used for archival purposes, as well as the workflow and method to do so.
+Similar to MagicDraw, it is crucial that the normative source of information is clearly defined between the verification reports and other repositories which are synced or used for archival purposes, as well as the workflow and method to do so.
 
 \subsubsection{Computerized Maintenance Management System, CMMS}
 
-Rubin will use a Computerized Maintenance Management System  (CMMS) to store the Observatory's maintenance procedures for operations. 
+In operations, the project will use openMAINT\textregistered\ as a customize Computerized Maintenance Management System (CMMS), with the assistance from the managing company, Tecnoteca srl\copyright . \citep{openmaint-cite}
+The CMMS is expected to execute and coordinate maintenance activities, maintain the history of these activities, and provide reporting tools.
+It is expected that not all procedures will be stored in CMMS, e.g., a hyperlink to a procedure in DocuShare may be used instead of writing the procedure into CMMS.
+As the work release workflow will be in Jira, the CMMS will have an interface (e.g., REST API) and update Jira as needed.
+With a well defined workflow, the CMMS and Jira interactions can be streamlined to minimize confusion of scope and use.
 
+It is recommended the project review the expected capabilities of CMMS by the start of operations so it can be determined what type of information will be in CMMS as the normative source of information.
+All other information should be stored in another actively supported repository.
+It is crucial that the normative source of information is clearly defined between the CMMS and other repositories which are synced or used for archival purposes, as well as the workflow and method to do so.
 
 \subsubsection{NOIRLab Alcea Risk Tool}
 
@@ -255,6 +258,6 @@ The Rubin Observatory information is exported and archived in GitHub by operatio
 Access will be limited to those using the tool directly and designees.
 Given the limited access, the project expects to use Jira for detailed planning and analysis.
 
-The project should confirm that the normative source for information for risk, opportunities and mitigations will be Jira.
+It is recommended the project should confirm that the normative source for information for risk, opportunities and mitigations will be Jira.
 Assuming Jira will be used, the type or criteria of risks, opportunities and mitigations required to be included in the Alcea Risk Tool must be defined and agreed upon between the project and NOIRLab.
-Additionally, a workflow, method and/or software must be developed by the project to ensure information is consistently synced at an agreed upon frequency.
+Additionally, it is recommended that a workflow, method and/or software is used to ensure information is consistently synced at an agreed upon frequency.

@@ -6,81 +6,73 @@ It's purpose is to assist users in retrieving and discovering documentation and 
 As such, the access trees will be tailored to use case and role-based needs.
 The Access View is be agnostic to the storage location because access is provided through the Documentation Portal so users do not need to know the repository for information.
 
-The proposal includes an example with the following root-nodes: Operational View, Safety View, Scientific View, and Engineering View.
-These are explained in the following subsections and Figure \ref{fig:access-view-example}.
-Project should consider use cases and desirable, e.g., Documentation View, Day-time and Night-time Views, Safety and Security View, Outreach View.
+The following subsections include four recommended trees for the Access View developed by the Documentation Working Group: Operational Access View, Safety Access View, Scientific Access View, and Engineering Access View.
+It was natural to develop an Access View tree from a system decomposition, but it is useful for the project to determine if there are more efficient or natural trees, such as activity-based trees.
+For each Access View tree, there are many ways and reasons to break the tree into the root-nodes.
+With such sprawling associated subjects, it's more crucial to develop a strategy to break these root-nodes and leaf-nodes by considering categories, impacts to users, and how users would want to find associated information.
 
-\begin{figure}[ht]
-\caption{Temporary Caption.}
-\centering
-\includegraphics[width=\textwidth]{access-view-example-temp}
-\label{fig:access-view-example}
-\end{figure}
+\subsubsection{Operational Access View}
 
-\subsubsection{Operational View}
-
-Operational View helps with interfaces of real-time data and visualization, observations and its programming, and system state.
-It may be natural to separate via leaf-nodes the Main Telescope from the AuxTel to capture specific differences such as control interfaces.
-Another natural break down could be day- and night-time operations.
-Groups should take advantage of commonalities and referential nature of the Documentation Views.
+The Operational Access View tree is intended to help with interfaces of real-time data and visualization, observations and its programming, and system state.
+Figure \ref{fig:access-view-operational-example} is an example of the Operational Access View.
+It may be natural to have separate leaf-nodes for the Main Telescope and AuxTel, capturing specific differences such as control interfaces.
+Another natural break down could be day- and night-time operations, as shown in Figure \ref{fig:access-view-day-night-operations-example}.
+Responsible groups should take advantage of commonalities and referential nature of the Documentation Views.
 Users include use of equipment control devices, procedures and protocols for operation and maintenance, such as control room staff, viewing assistants.
 
 \begin{figure}[ht]
-\caption{Temporary Caption.}
 \centering
-\includegraphics[width=\textwidth]{access-veiw-day-night-operations-example-temp}
-\label{fig:access-veiw-day-night-operations-example-temp}
+\includegraphics[scale=0.7]{access-view-operational-example}
+\caption{Example of Operational Access View Tree with Root-nodes.}
+\label{fig:access-view-operational-example}
 \end{figure}
 
-\subsubsection{Safety View}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{access-view-day-night-operations-example}
+\caption{Example of Operational Access View Tree from Daytime and Nighttime Operations.}
+\label{fig:access-view-day-night-operations-example}
+\end{figure}
 
-The Safety View focuses on accessing the different information related directly to Safety Procedures and Protocols that apply to the different systems.
-This can help add consistency and appropriate requirements as necessary.
-This Access Would lead users to General Safety procedures, Specific Safety Procedures, Emergency Procedures of telescope and summit facilities.
-These Collections shall be available to cover the information needed during activities authorized by the safety and security team
+\subsubsection{Safety Access View}
 
+The Safety Access View tree focuses on accessing information related directly to safety procedures and protocols that apply to the different systems.
+This can help add consistency and verify requirements.
+This tree would lead users to general safety procedures, specific safety procedures, emergency procedures of telescope and summit facilities (excludes emergency response).
+The example provided by Figure \ref{fig:access-view-safety-example} includes safety and security aspects.
 Users include safety, engineering, security, maintenance staffs and management.
 
 \begin{figure}[ht]
-\caption{Temporary Caption.}
 \centering
-\includegraphics[width=\textwidth]{access-veiw-safety-example-temp}
-\label{fig:access-veiw-safety-example-temp}
+\includegraphics[width=\textwidth]{access-view-safety-example}
+\caption{Example of Safety Access View Tree.}
+\label{fig:access-view-safety-example}
 \end{figure}
 
-\subsubsection{Scientific View}
+\subsubsection{Scientific Access View}
 
-The Scientific View aims at access to scientific platforms and interfaces that correspond to Rubin Observatory science objectives.
+The Scientific Access View tree is for scientific platforms and interfaces that correspond or impact Rubin Observatory science objectives.
+It is intended to ease access to the information by providing a clear list of the software and various databases.
+An example is provided by Figure \ref{fig:access-view-scientific-example}.
+Users include scientific, engineering, and observing staff and management.
 
 \begin{figure}[ht]
-\caption{Temporary Caption.}
 \centering
-\includegraphics[width=\textwidth]{access-veiw-scientific-example-temp}
-\label{fig:access-veiw-scientific-example-temp}
+\includegraphics[width=\textwidth]{access-view-scientific-example}
+\caption{Example of Scientific Access View Tree.}
+\label{fig:access-view-scientific-example}
 \end{figure}
 
-\subsubsection{Engineering View}
+\subsubsection{Engineering Access View}
 
-The purpose of the Engineering View is access to Rubin Observatory technical information, including:
+The Engineering Access View tree is for accessing Rubin Observatory technical information.
+In addition to the technical documentation, access interfaces and facility-related data would be needed.
+An example is provided by Figure \ref{fig:access-view-engineering-example}.
+Users include staff and management involved in system performance and system engineering activities.
 
-\begin{itemize}
-\item Accessing specific interfaces and facilities data
-\item Sub-systems' Documentation and components to implement an activity 
-The Linking access structure would lead users to:
-\item Technical Reports
-\item Design Documentation
-\item Manuals and links to other components documentation
-\item Sub-systems' Interface Documentation
-\item Construction Documentation. Technical Documentation for the software is separated from hardware Documentation. Technical Documentation within Engineering view:
-\item Subsystem Documentation Interfaces
-\item Manuals
-\item Vendors deliverables
-\item Specific documentation by component
-\end{itemize}
-
-There are many way and justifications on how to break this view into leaf-nodes.
-As the Documentation Working Group developed this, many people readily used a system decomposition as one form.
-Other found it potentially useful to break the tree down to specific activity types, e.g., Validation/Verification, Failure Evaluation, Maintenance, Engineering Control, Engineering Design.
-Combining these example breakdowns can also be considered.
-With such sprawling associated subjects, it's more crucial to develop a strategy to break these leaf-nodes down further by considering categories, impacts to users and how they could want to find associated information.
-Note that the Topic View should also be considered when performing this development exercise.
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.7]{access-view-engineering-example}
+\caption{Example of Engineering Access View Tree.}
+\label{fig:access-view-engineering-example}
+\end{figure}
