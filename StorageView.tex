@@ -85,7 +85,7 @@ The site itself is built with React/Gatsby.js (\url{https://github.com/lsst-sqre
 It is still in development and the current status is documented at \url{https://www.lsst.io/about/}.
 
 As a customized set of tools that is heavily used by the project, it is recommended to continue the use of LTD and its software system into operations.
-The project should use documents and technotes to capture information that is static, rarely changed or serving a temporary need (e.g., proposals, documenting proof or principles, status updates);
+The project should use documents and technotes to capture information that is static, rarely changed or serving a temporary need (e.g., proposals, documenting proof of principles, status updates);
 whereas, guides should be used for information that is actively updated with current information (e.g., troubleshooting guides, procedures not under change control).
 Neither LTD documentation type should be used for documents under change control albeit one can link to the change-controlled document within a document or guide.
 Further, as the LTD software system, it's additional utilities and \url{https://www.lsst.io} are designed and built by the SQuaRE team, there is considerable opportunity to leverage the expertise and experience already developed to implement a documentation portal for other platforms (see Section \ref{sec:DocPortal}).
@@ -96,7 +96,7 @@ Following the department/owner or specific technote series (e.g., RTN, SITCOMTN)
 \subsubsection{Confluence and Jira}
 \label{confluence-jira-storage}
 
-Confluence \citep{Confluence-cite} and Jira \citep{Jira-cite} are part of the Atlassian Corperation suite of tools used by the construction and operations projects for many purposes.
+Confluence \citep{Confluence-cite} and Jira \citep{Jira-cite} are part of the Atlassian Corporation suite of tools used by the construction and operations projects for many purposes.
 They are collaborative tools where teams/groups can document, share and develop information.
 Confluence is organized into \emph{spaces}, each with a varying number of pages and sub-pages.
 Jira is organized into \emph{projects}, each of which tracks a list of enumerated tickets or issues.
@@ -115,7 +115,7 @@ and (4) hazard mitigation verification.
 As tools that are heavily used by the project, it is recommended to continue the use of Confluence and Jira into operations.
 With a wiki like Confluence which that integrates well with Jira, the two are especially convenient for rapidly developing new ideas, taking and storing meeting minutes, collecting information in interactive tables, and drafting outlines for future documentation, all while tracking the tasks and being able to actively report on status.
 Other powerful features include simultaneous editing, native sharing options internal to Confluence/Jira or external such as email, etc.
-As operational-based information takes form, departments and technical groups should consider the spaces and projects to prevent having a large number of unused or old areas, as seen with the current Confluence and Jira instances.
+As operational-based information takes form, departments and technical groups should reconsider the spaces and projects to prevent having a large number of unused or old areas, as seen with the current Confluence and Jira instances.
 In the case of Confluence, project staff must be fastidious in moving content needed on a long-term basis into other official storage locations at the earliest appropriate stage (e.g., DocuShare, lsst.io).
 Users must understand the limitations of information and provided guidance as to how and when information should be moved from Confluence or Jira to another storage location.
 
@@ -137,15 +137,15 @@ Solidworks PDM is the normative source of information for system decomposition.
 It is recommended to continue use of PDM vault into operations.
 In operations, as-built design information will be needed to help with logistics planning for maintenance and future design upgrades.
 No information has been deleted or archived at this time.
-If continued into operations, it is recommended the vault is reorganize so that legacy data is archived for access but is not easily mistaken for as-built design data.
+If continued into operations, it is recommended the vault is reorganized so that legacy data is archived for access but is not easily mistaken for as-built design data.
 The specific structure for the branch of the Storage View is highly dependent on this reorganization.
 For example, the high-level nodes could be by subsystem or physical location, lifecycle of particular drawings (e.g., as-designed, as-built), or use within specific states of the telescope (e.g., on-sky imaging, preventive maintenance shutdown).
 
 \subsubsection{MagicDraw}
 
 MagicDraw \citep{MagicDraw-cite} is a tool used to maintain a model of the Rubin Observatory system by creating a relational database between system elements.
-There are a number of elements capture in the MagicDraw database defined as the normative source of information, with the information synced and/or exported to other repositories.
-As the normative source of information, it will be up-to-date when given over from construction and continue active use within operations.
+There are a number of elements captured in the MagicDraw database defined as the normative source of information, with the information synced and/or exported to other repositories.
+As the normative source of information, it will be up-to-date when given over from construction and will continue active use within operations.
 Details on how Rubin Observatory uses MagicDraw are included in the user guides collected on the following Confluence page: \url{https://confluence.lsstcorp.org/display/SYSENG/MagicDraw+LSST+Users+Guide}.
 
 \begin{itemize}
@@ -178,7 +178,7 @@ Stored in subdirectories of TS-Deliverables are vendor-supplied documentation as
 It is recommended to discontinue use of Euporie for operations.
 A review of the content of personal and shared directories is recommended to determine what information should be relocated on a case-by-case basis.
 Additionally, a determination should be made if information should be archived as construction-related or moved to a more active storage location for operations staff access.
-After this is complete and access will continue for purpose unrelated to operations, users must understand the limitations of information (namely for long-term operational activities) and provided guidance as to how and when information should be moved from Euporie to another storage location.
+After this is complete, and if access will continue for purpose unrelated to operations, users must understand the limitations of information (namely for long-term operational activities) and provided guidance as to how and when information should be moved from Euporie to another storage location.
 
 \subsubsection{GitHub}
 
@@ -198,17 +198,17 @@ There are a large number of repositories containing the normative source of info
 \subsubsection{Drupal}
 
 Drupal \citep{drupal-cite} is an open source web content management framework used for project websites’ back-end, including \url{https://www.lsst.org}, \url{https://project.lsst.org} and sites created to facilitate project meetings and reviews.
-To avoid the complication of having to make multiple site updates when content changes, these documents of each of these sites are served by hyperlinks that pull files from whatever repositories contain their normative sources of information.
+To avoid the complication of having to make multiple site updates when content changes, the documents on each of these sites are served by hyperlinks that pull files from whatever repositories contain their normative sources of information.
 While it is possible to upload discrete files to a specific site’s server location, by policy and standard the project eschews doing so.
 
-The major exception is regarding project-level meetings and reviews sites, such as the Project and Community Workshop (PCW) or agency reviews.
+The major exception is project-level meetings and reviews sites, such as the Project and Community Workshop (PCW) or agency reviews.
 Their site directories contain document and presentation files in order to preserve the content presented at the time.
 At the conclusion of the event, these files are uploaded to DocuShare in a collection specific to the event.
 Documents such as policies, requirements, and design documents are uploaded as a ZIP file to preserve a snap-shot while preventing replication and multiple handles that may cause confusion with the normative source of information.
 
 It is recommended for the project to evaluate the need for web content management in operations.
 If needed, the project should consider if other tools planned for operations would fulfill the same need, or if Drupal should be continued into operations.
-It must be determined the level of change control appropriate for websites, as well as files in site directories or hyperlinked files without change control.
+The level of change control appropriate for websites must be determined, as well as files in site directories or hyperlinked files without change control.
 Since the method described for project-level meetings and reviews may not be implemented by all subsystems on the construction project, it is recommended the project review the content to ensure historical information is preserved appropriately.
 If Drupal is discontinued, it is recommended the project review if all required archival information is transferred to the new web content management system and/or an actively supported repository (e.g., DocuShare).
 If web content management is controlled to the same degree as construction, it is recommended that the project provide a clear workflow of how and where normative sources of information is used and stored.
@@ -216,8 +216,8 @@ If web content management is controlled to the same degree as construction, it i
 \subsubsection{LSSTCam information}
 
 During construction, the Camera used a set of web-based tools used across multiple sites during the testing and construction of the Camera and its subcomponents --- eTraveler, Data Portal and Data Catalog.
-Databases and servers managed by SLAC used these tools to capture procedure, testing data, track component/assembly status and information, and track the acceptance and non-conformance reports.
-Both the "prod" and "dev" instances including information on production parts.
+Databases and servers managed by SLAC used these tools to capture procedure, testing data, track component/assembly status and information, and to track the acceptance and non-conformance reports.
+Both the "prod" and "dev" instances include information on production parts.
 Additionally, there is construction information stored in a SLAC-hosted instance of Confluence and Jira.
 
 It is recommended the project review the information to determine the type of information and method by which it is archived to an actively supported repository (e.g., DocuShare).
@@ -228,7 +228,7 @@ For repositories that may not be available throughout operations, the project sh
 
 Primavera P6\textregistered\ is a project portfolio management tool by Oracle\textregistered\ Corporation. \citep{P6-cite}
 It was used for planning, managing, and executing the Construction project.
-It is recommended that the P6 record of the Construction project be exported and saved at the end of the Project; its use will not continued into Operations.
+It is recommended that the P6 record of the Construction project be exported and saved at the end of the Project; its use will not continue into Operations.
 
 \subsubsection{Verification reports}
 
@@ -245,7 +245,7 @@ In operations, the project will use openMAINT\textregistered\ as a customizable 
 The CMMS is expected to execute and coordinate maintenance activities, maintain the history of these activities, and provide reporting tools.
 It is expected that not all procedures will be stored in CMMS, e.g., a hyperlink to a procedure in DocuShare may be used instead of writing the procedure into CMMS.
 As the work release workflow will be in Jira, the CMMS will have an interface (e.g., REST API) and update Jira as needed.
-With a well defined workflow, the CMMS and Jira interactions can be streamlined to minimize confusion of scope and use.
+With a well-defined workflow, the CMMS and Jira interactions can be streamlined to minimize confusion of scope and use.
 
 It is recommended the project review the expected capabilities of CMMS by the start of operations so it can be determined what type of information will be in CMMS as the normative source of information.
 All other information should be stored in another actively supported repository.
@@ -258,6 +258,6 @@ The Rubin Observatory information is exported and archived in GitHub by operatio
 Access will be limited to those using the tool directly and designees.
 Given the limited access, the project expects to use Jira for detailed planning and analysis.
 
-It is recommended the project should confirm that the normative source for information for risk, opportunities and mitigations will be Jira.
+It is recommended the project should confirm that the normative source of information for risk, opportunities and mitigations will be Jira.
 Assuming Jira will be used, the type or criteria of risks, opportunities and mitigations required to be included in the Alcea Risk Tool must be defined and agreed upon between the project and NOIRLab.
 Additionally, it is recommended that a workflow, method and/or software is used to ensure information is consistently synced at an agreed upon frequency.
