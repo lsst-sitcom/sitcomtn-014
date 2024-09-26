@@ -5,8 +5,8 @@ The Documentation Working Group recommends the creation of a \emph{Rubin Documen
 This portal will provide interfaces for both searching (based on content and metadata) and browsing (based on hierarchical categorization) of documentation resources, and the Documentation Views (Section~\ref{sec:views}) would provide different methods of doing so.
 Documentation does not reside within the portal itself.
 Rather, the portal's objective is to efficiently link the user to the document, where it is stored in any of the observatory's adopted storage platforms (Section~\ref{sec:storage-view}).
-The new Rubin Documentation Portal discussed herein is based upon the website \href{www.lsst.io} which provides a search and browsing interface for the Rubin Observatory's public-facing technical documentation operated by the SQuaRE (Data Management) team. \citep{lsst.io-cite}
-(While summarized in this document, a detailed description of \href{www.lsst.io}, LSST the Docs (LTD) and applicable software is available in \citedsp{SITCOMTN-012}.)
+The new Rubin Documentation Portal discussed herein is based upon the website \url{www.lsst.io} which provides a search and browsing interface for the Rubin Observatory's public-facing technical documentation operated by the SQuaRE (Data Management) team. \citep{lsst.io-cite}
+(While summarized in this document, a detailed description of \url{www.lsst.io}, LSST the Docs (LTD) and applicable software is available in \citedsp{SITCOMTN-012}.)
 The new Rubin Documentation Portal will be accessible only those with Rubin Observatory staff credentials, and will be purpose-built for observatory and survey operations.
 This section describes the design principles, technical architecture, security model and cost estimate of the Rubin Observatory Documentation Portal.
 
@@ -35,11 +35,11 @@ The portal should also reduce its metadata storage of confidential documents to 
 
 \subsection{Technical architecture}
 
-The architecture described here is based upon that which is already put into production with the \href{www.lsst.io} portal for public-facing documentation.
+The architecture described here is based upon that which is already put into production with the \url{www.lsst.io} portal for public-facing documentation.
 Starting from this working archetype relieves a great deal of technical risk and development from the new portal's implementation.
 Both portals would share the use of Algolia \citep{Algolia-cite} as a search back-end and Ook \citep{ook-cite} as a content indexing service.
 The Rubin Documentation Portal will have an independent front-end to support the specific Access Views recommended by the Documentation Working Group (Section \ref{sec:access-view}).
-It will also use a separate instance of the Algolia database to eliminate any risks associated with leaking internal documentation to the public-facing \href{www.lsst.io} portal.
+It will also use a separate instance of the Algolia database to eliminate any risks associated with leaking internal documentation to the public-facing \url{www.lsst.io} portal.
 
 Figure \ref{fig:portal-architecture} depicts the components of the Rubin Documentation Portal.
 
@@ -58,14 +58,14 @@ The core function of the Rubin Documentation Portal is to enable access to docum
 To implement this, it needs a back-end service that contains metadata about Rubin Observatory's documentation holdings and provides interfaces to access and query that metadata from the front-end (i.e., the website).
 This search database and interface could be made for ``free'' with entirely open-source components such as Elasticsearch \citep{elastic-cite} and in-house web service.
 However, a search database and service are sufficiently generic that we cannot add value by making it in-house, and in fact developing, tuning, and operating this service, would be costly in terms of labor.
-For the \href{www.lsst.io} public documentation portal, the developers opted to use Algolia and recommend the same choice for the new Rubin Documentation Portal.
+For the \url{www.lsst.io} public documentation portal, the developers opted to use Algolia and recommend the same choice for the new Rubin Documentation Portal.
 
-Although \href{www.lsst.io} is currently operating on a free open-source license of Algolia, the new internal Rubin Documentation Portal would be an entirely paid license.
+Although \url{www.lsst.io} is currently operating on a free open-source license of Algolia, the new internal Rubin Documentation Portal would be an entirely paid license.
 Algolia prices based on record counts and request rates.
 In operating \href{www.lsst.io}, we found record count to be the limiting factor.
 At the moment, $1,000$ records costs \$1 per month.
 $1,000,000$ records would cost \$850 per month with volume discounts.
-For reference, the \href{www.lsst.io} service currently uses $110,000$ records to host all technical notes and change-controlled documents with drafts hosted on LSST the Docs (LTD), also known as lsst.io.
+For reference, the \url{www.lsst.io} service currently uses $110,000$ records to host all technical notes and change-controlled documents with drafts hosted on LSST the Docs (LTD), also known as lsst.io.
 
 Note that a single document is composed of potentially as many records in Algolia.
 To optimize full-text search, we break a document into smaller records, generally across section boundaries.
@@ -76,7 +76,7 @@ Sorting documents by date, and document number, in addition to relevance, consum
 \subsubsection{Ook}
 
 The Ook service is responsible for continuously indexing content into Algolia. \citep{ook-cite}
-Whereas we chose Algolia to provide a turn-key search database service, for \href{www.lsst.io} we chose to build the indexing service in-house to have complete control over how documents are indexed, and what metadata is associated with each document.
+Whereas we chose Algolia to provide a turn-key search database service, for \url{www.lsst.io} we chose to build the indexing service in-house to have complete control over how documents are indexed, and what metadata is associated with each document.
 For example, LaTeX-based documents are indexed based on metadata exported from the Lander PDF landing page generator (also developed in-house), which in turn parses LaTeX syntax in the document source to access metadata such as titles, authors, and so on.
 The configurability of Ook is beneficial to indexing other types of highly specialized documentation.
 
@@ -108,7 +108,7 @@ The Algolia services provides all browsing and search functionality; the front-e
 In addition to providing a link to the original document, the portal can also provide an immediate view of a document's metadata.
 Although the front-end application can show a basic view of a document's metadata based on metadata common to all records, the website can be developed to show additional metadata for different types of documents.
 
-For \href{www.lsst.io}, we built the site as a React JavaScript application.
+For \url{www.lsst.io}, we built the site as a React JavaScript application.
 This allowed us to use and customize the pre-made widgets provided by Algolia for building the user interface.
 
 The front-end application will be accessible only to users who log in.
