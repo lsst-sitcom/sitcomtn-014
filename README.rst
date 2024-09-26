@@ -10,7 +10,7 @@ Project Documentation Future State Report
 SITCOMTN-014
 ============
 
-This document is a report on the recommended future state and organization of Rubin Construction Documentation.  This will constitute the planned technical documentation package delivered from the Construction Project to Operation as part of the criteria for construction completeness.
+This technical note is a report to recommend a future state for Rubin Observatory Operations documentation by the Project-wide Documentation Working Group. This proposal presents a high-level documentation strategy for Rubin Observatory Operations with suggested methodologies to transition Construction Project documents and organizations for the technical documentation package needed to establish construction completeness and operational readiness. It responds to charge item 3 in the Charge to the Documentation Working Group, LSE-489. Migration plans, schedule and resources to migrate to the future state for this documentation will be reported in another technical report, RTN-076. Implementation of this proposal (or its equivalent) is a key deliverable from the Rubin Observatory Construction Project to Operations.
 
 Links
 =====
