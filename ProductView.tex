@@ -3,9 +3,9 @@
 The \emph{Product View} is based on a common approach used in product management, a \emph{product tree diagram}.
 The Documentation Working Group developed a framework customized for Rubin Observatory operations to facilitate the development of documentation and effective communication consistently project-wide.
 The two primary purposes are to convey ownership and responsibility of technical documentation and more readily describe complicated systems with context and categorization.
-The Product View allows one to identify specific documents as the normative source of information, then provide a manner which one can associate, link and cross reference documentation and informational dependencies from respective normative sources or references thereafter.
-These goals support identifying and resolving gaps, miscommunications or error-likely situations.
-The expected primary users are managers, product owners, engineers, specialists, technicians, and users who want to search downwards in a system's hierarchy.
+The Product View allows one to identify specific documents as the normative source of information, then provide a manner to associate, link and cross reference documentation and informational dependencies from respective normative sources or references thereafter.
+These goals support identifying and resolving gaps, miscommunications and error-likely situations.
+The expected primary users are managers, product owners, engineers, specialists, technicians and users who want to search downwards in a system's hierarchy.
 
 The Product View will consist of product trees developed by the owning \emph{Rubin Observatory Departments}, their technical teams and product owners.
 Each department's product tree(s) should be constructed to best organize and compartmentalize the set of \emph{products} that make up the suite of complex systems under their purview.
@@ -13,21 +13,23 @@ Products can span all manner of objects, such as department-specific categories,
 The Product View does not need to follow the physical decomposition of the system; it should be based around functionality, user needs, or other attributes as determined by the technical team or responsible group.
 
 Each department or group is responsible to manage the product trees in addition to updating technical documentation to support access to retrieve associated information, interfaces and requirements with consistency and reliability.
-In light of this need, the Documentation Working Group recommends all Product View trees be available via one of the project repositories --- it is suggested to create an appropriate lsst.io website so departments and groups can easily make changes.
+In light of this need, the Documentation Working Group recommends all Product View trees be available via one of the project repositories.
+It is suggested to create an appropriate lsst.io website so departments and groups can easily make changes within a currently supported documentation tool (see Section \ref{sec:LTD}).
 
-Products are defined by the owning department in terms of a system or set of systems which can be grouped or decomposed into subsystems or individual components that is appropriate for them and their stakeholders.
-Referred to as the \emph{generic categories}, the customized categories for the Product View developed by the Documentation Working Group are predefined root-nodes and the first set of leaf-nodes for a product tree.
-The generic categories were developed to capture critical operational aspects of a product while being extendable to subsystems of a product, where the subsystem may be a product with subsystems in its own right; i.e., a \emph{Level-1 product} can be comprised of multiple Level-2 or lower-level subsystems, and those subsystems which are products are \emph{Level-2+ products}.
-Note that these terms do not correspond to the construction phase definition of Work Breakdown Structure (WBS) or colloquial "subsystem" used across the construction project.
-It is at the department's discretion on how to best organize and characterize these products and their product trees to manage their systems and flow of information; however, it is expected that all generic categories are associated with Level-1 and Level-2+ products either by construction or referenced information.
-While there will be exceptions for low-level systems, the Product View and its generic categories are designed to robustly capture construction completeness and operations readiness because they should generate sufficient discussion between groups and stakeholders to ensure key information is identified and provided.
+Products are defined by the owning department in terms of a system or set of systems which can be grouped or decomposed into subsystems or individual components to a degree appropriate for them and their stakeholders.
+Referred to as the \emph{generic categories}, the customized categories for the Product View developed by the Documentation Working Group are predefined root-nodes and the first set of leaf-nodes for any product tree.
+The generic categories were developed to capture critical operational aspects of a product while being extendable to subsystems and components of a product, where the subsystem may be a product with subsystems in its own right; i.e., a \emph{Level-1 product} can be comprised of multiple Level-2 or lower-level products (subsystems).
+Those subsystems which are products are \emph{Level-2+ products}.
+Note that these terms do not correspond to the construction phase definition of Work Breakdown Structure (WBS) or colloquial ``subsystem'' used across the construction project.
+It is at the department's discretion on how to best organize and characterize these products and their product trees to manage their systems and flow of information; however, it is expected that all generic categories are associated with Level-1 and Level-2+ products, either by construction, referenced information or reason for non-applicability.
+While there will be exceptions for low-level products, the Product View and its generic categories are designed to robustly capture construction completeness and operations readiness because they should generate sufficient discussion between groups and stakeholders to ensure key information is identified and provided.
 
 \subsubsection{Departments for Rubin Observatory operations}
 
-The Rubin Observatory departments shall be described by their associated scope, systems and/or products descriptions, and contacts to identify managers, product owners, or other key personnel (e.g., organizational chart, contact list).
+The Rubin Observatory departments shall be described by their associated scope, systems and/or products descriptions, and contacts to identify managers, product owners and other key personnel (e.g., via organizational chart or contact list).
 This section lists each department and respective scope.
-Contact information should be available to individuals that require it, and it should be clear when it's appropriate to contact an individual or group (e.g., as a product owner).
-Note that sometime \emph{R} prepends these acronym, e.g., ROO for Rubin Observatory Operations.
+Contact information should be available to individuals that require it, and it should be clear when it is appropriate to contact an individual or group (e.g., as a product owner).
+Note that the letter ``R'' can be added prepends to the listed department acronyms, e.g., ROO for Rubin Observatory Operations.
 
 \textbf{Director's Office} (DO) ---
 The Vera C.\ Rubin Observatory Director's Office is responsible for the overall management of the observatory and the LSST survey, as well as fulfilling the mission of the observatory and realizing its vision.
@@ -55,18 +57,19 @@ EPO serves as a website that highlights and contextualizes the scientific power 
 
 The generic categories provide a basis to define and associate critical systems and objective elements of a department and associated systems; they are not products in themselves.
 They are designed by the Documentation Working Group to relay information in a complete and concise manner by standardizing the distribution of information and products.
-Further opportunities arise with a well designed set of product trees: clearly establish relationships and dependencies between systems, serve to introduce the department/system in a digestible manner, and create a more adaptable structure to organize and target information between technical groups internal or external to the department.
+Further opportunities arise with a well designed set of product trees: clearly establish relationships and dependencies between systems, serve as an introduction to department/system in a digestible manner, and create a more adaptable structure to organize and target information between technical groups, either internal or external to the department.
 
 The generic categories are separated by five high-level categories that act as root-nodes --- Technical Design, Procedures, Safety and Emergency Response, Evaluation and Archival Documents.
 Each one includes subcategories that are the first- and second-level leaf-nodes.
 The generic categories are applicable to a variety of systems (e.g., hardware-centric, software-centric, hardware and software distributed, process and protocol dedicated) such that information associated to these categories and subcategories are available for practically all systems or subsystems described via a Product View tree.
-It may be difficult at first for technical groups to perform a logical and relevant decomposition of the systems such that the generic categories are applicable to all product trees, especially if a system can change in different scenarios, contexts, or states (e.g., the Simonyi Survey Telescope could have a product tree for maintenance and a different product tree for on-sky operations where each capture different components and interdepartmental interfaces separately).
+It may be difficult at first for technical groups to perform a logical and relevant decomposition of the systems such that the generic categories are applicable to all product trees, especially if a system can change in different scenarios, contexts or states (e.g., the Simonyi Survey Telescope could have one product tree for maintenance and another product tree for on-sky operations where each captures different components and inter-departmental interfaces separately).
 However, even in the case where the owner and stakeholders agree a category doesn't apply, the generic categories are a way to define and describe scope, respective responsibilities, inter- and intra-departmental interfaces, requirements, and key expectations.
 
-Teams can and should create product trees that refer to documentation and ensure the product tree describes how these external documents address the generic categories.
+Technical teams can and should create product trees by referring to documentation.
+As context to the product tree, they should ensure to describe how these external documents address the generic categories.
 For example, this can take the form of a diagram coupled with a narrative, potentially with different representations between leaf-nodes.
-Within the Product View as a whole, consisting of many product trees, it is intended systems and subsystems refer to higher- or lower-level product trees to reduce replication and the risk of confusing users accessing information between the group(s) and stakeholder(s).
-Furthermore, the referential nature can be applied for interdepartmental information and dependencies so it's clear which department owns the information and any departments which utilize it.
+Within the department's Product View which consists of many product trees, the Documentation Working Group intended for systems and subsystems to refer to higher- or lower-level product trees to reduce replication and the risk of confusing users accessing information between the groups and stakeholders.
+Furthermore, the referential nature can be applied for inter-departmental information and dependencies so it's clear which department owns the information and any departments which utilize it.
 For example, an interface control document (ICD) and an N-squared diagram could be sufficient references to describe the category \textit{Inter-department Interfaces}.
 
 Here are the generic categories:
@@ -158,8 +161,8 @@ Here are the generic categories:
 Here are two examples of product tree referencing, using Auxiliary Telescope (AuxTel), LSSTCam and Commissioning Camera (ComCam).
 Note that it would be beneficial to design product trees which take advantage of the similarities between LSSTCam and ComCam, even though there will be major differences, too.
 
-For these three systems, the Access Interfaces category would include a common set of software, e.g., LSST Observing Visualization Environment (LOVE), Nublado (Jupyter) interface, Script Queue, Watcher.
-This common set of software could be included in a higher-level product tree (potentially a Level-2 product under the Observatory Operations department) or as a referential Level-2+ product trees; then, not only is the information referenced to all three efficiently, but the software product tree(s) can be designed to easily indicate differences between the three systems, say, for the Software Development categories.
+For these three systems, the Access Interfaces category would include a common set of software, e.g., LSST Observing Visualization Environment (LOVE), Nublado (Jupyter) interface, Script Queue and Watcher.
+This common set of software could be included in a higher-level product tree (potentially a Level-2 product under the Observatory Operations department) or as a referential Level-2+ product trees; then, not only is the information referenced to all three efficiently, but the software product tree(s) can be designed to easily indicate differences between the three systems, say, for the \emph{Software Development categories}.
 
 The three systems interface with a set of external systems simultaneously connected to them, e.g., Engineering Facility Database (EFD), Environmental Awareness System (EAS), Global Interlock System (GIS).
 These external systems could also be set up as referential product trees which are referenced by AuxTel, LSSTCam and ComCam, as well as others.
@@ -173,8 +176,8 @@ Figure \ref{fig:product-view-departments-example} depicts the Rubin Observatory 
 \label{fig:product-view-departments-example}
 \end{figure}
 
-Figure \ref{fig:product-view-auxtel-technical-design-example} is a more comprehensive example of AuxTel, depicting the Technical Design generic category.
-Each category (yellow) and each subcategory (blue) from the Technical Design is addressed such that the reader has an idea of what the system is, how it is used, and documentation with references therein for retrieving critical information.
+Figure \ref{fig:product-view-auxtel-technical-design-example} is a more comprehensive example of AuxTel, depicting the \emph{Technical Design} generic category.
+Each category (yellow) and each subcategory (blue) from this generic category is addressed with the intent of helping the reader understand the basic elements of the Level-1 product, how it is used, and documentation with references therein for retrieving critical information.
 Note that physical interfaces are not address in the example.
 
 \begin{figure}[htp!]
@@ -189,7 +192,7 @@ As previously described, it would be beneficial to organize the Product View to 
 This was not considered for the two figures.
 
 As another example of the Product View, Table \ref{table:product-view-department-ownership-example} shows how multiple departments can separate their responsibilities between a few high-level requirements and operational needs.
-With well-defined responsibilities, teams can communicate more effectively and the normative source of information should be identifiable.
+With well-defined responsibilities, technical teams can communicate more effectively and the normative source of information should be identifiable.
 
 \begin{table}[]
 \begin{tabular}{|l|l|l|l|}

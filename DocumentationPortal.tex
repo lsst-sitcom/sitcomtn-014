@@ -5,10 +5,10 @@ The Documentation Working Group recommends the creation of a \emph{Rubin Documen
 This portal will provide interfaces for both searching (based on content and metadata) and browsing (based on hierarchical categorization) of documentation resources, and the Documentation Views (Section~\ref{sec:views}) would provide different methods of doing so.
 Documentation does not reside within the portal itself.
 Rather, the portal's objective is to efficiently link the user to the document, where it is stored in any of the observatory's adopted storage platforms (Section~\ref{sec:storage-view}).
-The new Rubin Documentation Portal discussed herein is based upon the website \href{www.lsst.io} \citep{lsst.io-cite} which provides a search and browsing interface for the Rubin Observatory's public-facing technical documentation operated by the SQuaRE (Data Management) team.
-(A detailed description of \href{www.lsst.io}, LSST the Docs (LTD) and applicable software is available in \citedsp{SITCOMTN-012}.)
-The new portal will be accessible only those with Rubin Observatory staff credentials, and will be purpose-built for observatory and survey operations.
-This section describes the design principles, technical architecture, security model, and cost estimate of the Rubin Observatory Documentation Portal.
+The new Rubin Documentation Portal discussed herein is based upon the website \href{www.lsst.io} which provides a search and browsing interface for the Rubin Observatory's public-facing technical documentation operated by the SQuaRE (Data Management) team. \citep{lsst.io-cite}
+(While summarized in this document, a detailed description of \href{www.lsst.io}, LSST the Docs (LTD) and applicable software is available in \citedsp{SITCOMTN-012}.)
+The new Rubin Documentation Portal will be accessible only those with Rubin Observatory staff credentials, and will be purpose-built for observatory and survey operations.
+This section describes the design principles, technical architecture, security model and cost estimate of the Rubin Observatory Documentation Portal.
 
 \subsection{Design drivers}
 
@@ -33,7 +33,6 @@ The Rubin Documentation Portal should not maintain fine-grained access control f
 For secured documents, the portal relies upon the security mechanisms of the document's own storage platform.
 The portal should also reduce its metadata storage of confidential documents to ensure that content cannot be inferred from a search, for example.
 
-
 \subsection{Technical architecture}
 
 The architecture described here is based upon that which is already put into production with the \href{www.lsst.io} portal for public-facing documentation.
@@ -57,7 +56,7 @@ Data in the portal application is supplied by the Algolia search service \citep{
 
 The core function of the Rubin Documentation Portal is to enable access to documentation through browsing and search.
 To implement this, it needs a back-end service that contains metadata about Rubin Observatory's documentation holdings and provides interfaces to access and query that metadata from the front-end (i.e., the website).
-This search database and interface could be made for "free" with entirely open-source components such as Elasticsearch \citep{elastic-cite} and in-house web service.
+This search database and interface could be made for ``free'' with entirely open-source components such as Elasticsearch \citep{elastic-cite} and in-house web service.
 However, a search database and service are sufficiently generic that we cannot add value by making it in-house, and in fact developing, tuning, and operating this service, would be costly in terms of labor.
 For the \href{www.lsst.io} public documentation portal, the developers opted to use Algolia and recommend the same choice for the new Rubin Documentation Portal.
 
@@ -118,9 +117,9 @@ Another approach would be to place the application behind an OAuth proxy to prov
 
 \subsection{Support for multiple views}
 
-In Section~\ref{sec:views}, the Documentation Working Group outlines several views for hierarchically arranging documents trees.
-These views correspond to navigational structures in the front-end application.
-Although the front-end application code is generally "aware" of the different trees, individual documents are placed in the tree on the basis of metadata in their Algolia records, so that the Algolia service can pre-sort and filter documents into the trees.
+In Section~\ref{sec:views}, the Documentation Working Group outlines several Views for hierarchically arranging documents trees.
+These Views correspond to navigational structures in the front-end application.
+Although the front-end application code is generally ``aware'' of the different trees, individual documents are placed in the tree on the basis of metadata in their Algolia records, so that the Algolia service can pre-sort and filter documents into the trees.
 Since Ook supplies metadata to Algolia, and Ook in turn leverages metadata native to the document and the document's repository, the responsibility for curating documents into different views is the responsibility of individuals managing documents in each repository.
 
 \subsection{Information security}
